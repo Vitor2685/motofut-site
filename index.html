@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Site futurista de motos">
+  <title>Motos Futuristas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #fff;
+      background-color: #000;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      color: #00e0ff;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e0ff;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      animation: bgSlide 30s infinite linear;
+    }
+
+    .hero-content {
+      background: rgba(0,0,0,0.5);
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+
+    .hero h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #00e0ff;
+      text-shadow: 0 0 10px #00e0ff;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    @keyframes bgSlide {
+      0% {
+        background-image: url('https://images.unsplash.com/photo-1596386461350-73c4211f6c93?auto=format&fit=crop&w=1920&q=80');
+      }
+      33% {
+        background-image: url('https://images.unsplash.com/photo-1621934826958-6e5da353af0b?auto=format&fit=crop&w=1920&q=80');
+      }
+      66% {
+        background-image: url('https://images.unsplash.com/photo-1608563979497-4ab2db279b9c?auto=format&fit=crop&w=1920&q=80');
+      }
+      100% {
+        background-image: url('https://images.unsplash.com/photo-1596386461350-73c4211f6c93?auto=format&fit=crop&w=1920&q=80');
+      }
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+      background-color: #000;
+    }
+
+    section h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: #00e0ff;
+      margin-bottom: 2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 1rem;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #000;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    footer a {
+      color: #00e0ff;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Motos Futuristas</h1>
+    <nav>
+      <a href="#modelos">Modelos</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>O Futuro das Duas Rodas</h2>
+      <p>Motos elétricas, tecnológicas e sustentáveis</p>
+    </div>
+  </section>
+
+  <section id="modelos">
+    <h3>Modelos em Destaque</h3>
+    <p>Conheça os modelos mais inovadores do mercado de motos futuristas.</p>
+  </section>
+
+  <section id="galeria">
+    <h3>Galeria</h3>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1617131716489-539b0ec61f5b?auto=format&fit=crop&w=800&q=80" alt="Moto 1">
+      <img src="https://images.unsplash.com/photo-1621934826958-6e5da353af0b?auto=format&fit=crop&w=800&q=80" alt="Moto 2">
+      <img src="https://images.unsplash.com/photo-1608563979497-4ab2db279b9c?auto=format&fit=crop&w=800&q=80" alt="Moto 3">
+      <img src="https://images.unsplash.com/photo-1596386461350-73c4211f6c93?auto=format&fit=crop&w=800&q=80" alt="Moto 4">
+    </div>
+  </section>
+
+  <section id="contato">
+    <h3>Entre em Contato</h3>
+    <p>Quer saber mais sobre nossas motos? Fale conosco.</p>
+    <p><a href="mailto:contato@motosfuturistas.com">contato@motosfuturistas.com</a></p>
+  </section>
+
+  <footer>
+    &copy; 2024 Motos Futuristas. Desenvolvido com 💙. <a href="#">Topo</a>
+  </footer>
+
+</body>
+</html>
